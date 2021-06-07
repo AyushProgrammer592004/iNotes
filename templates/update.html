@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block title %}Home{% endblock title %}
+{% block body %}
+    <div class="container my-3">
+        <h1 class="my-3"><u>Update your note!</u></h1>
+        <form action="/update/{{note.sno}}" method="POST">
+            <div class="mb-3">
+                <label for="title" class="form-label">Notes Title</label>
+                <input type="text" class="form-control" name="title" id="title" aria-describedby="title"
+                    placeholder="Enter your note title" value="{{note.title}}">
+            </div>
+            <div class="mb-3">
+                <label for="description" class="form-label">Notes Description</label>
+                <input type="text" class="form-control" name="description" id="description"
+                    placeholder="Enter your note description" value="{{note.description}}">
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+{% endblock body %}

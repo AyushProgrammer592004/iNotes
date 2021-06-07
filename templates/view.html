@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block title %}View{% endblock title %}
+{% block body %}
+<div class="container my-3">
+    <h1 class="my-2"><u>Your Todo Details</u></h1>
+    <div class="col-md-12">
+        <div class="h-100 p-5 bg-light border rounded-3">
+                <p class="my-0"><strong><u>{{note.timestamp}}</u></strong></p>
+                <h2>{{note.title}}</h2>
+                <p>{{note.description}}</p>
+                <a href="/delete/{{note.sno}}" class="btn btn-primary" type="button">Delete</a>
+                <a href="/update/{{note.sno}}" class="btn btn-primary" type="button">Update</a>
+                <p class="my-2"><a href="/" class="btn btn-primary" type="button">Go Back To Home</a></p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock body %}
